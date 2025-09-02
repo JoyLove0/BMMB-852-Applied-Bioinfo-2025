@@ -34,6 +34,9 @@ nano path_to_directory/file.txt
 cd directory_containing_files/
 head file.txt #to see files
 
-#Output
+#Absolulte Path
 nano path_to_directory/file.txt
+
+#Output
+
 ```
