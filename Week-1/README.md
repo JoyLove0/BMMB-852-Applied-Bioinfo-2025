@@ -1,5 +1,5 @@
 # Assignment #1
-## Week 1: Set up your system and demonstrate basic UNIX command line actions
+# Week 1: Set up your system and demonstrate basic UNIX command line actions
 ### Question 5
 ```
 #Command: 
