@@ -1,9 +1,9 @@
 # Assigment 2
 
-### 1: Tell us a bit about the organism.
+## 1: Tell us a bit about the organism.
 The organism analyzed was Rhinopithecus bieti, also known as the black-and-white snub-nosed monkey. It is an endangered primate that primarly lives in high-altitude forests of China's and Tibet. As the name suggests, it is characterized by its snub nose with concave nostril. (I thought its nose was silly and that was why I chose it! :))
 
-### 2: How many sequence regions (chromosomes) does the file contain? Does that match with the expectation for this organism?
+## 2: How many sequence regions (chromosomes) does the file contain? Does that match with the expectation for this organism?
 This will be discussed in more detait but the assemble for this organism is not complete and therefore is primary composed of contigs and scaffolds. There are 105,032 sequence reqions, but previous studied suggest that the black-and-white snub-nosed monkey has 44 chromosomes. 
 
 Command:
@@ -15,7 +15,7 @@ Output:
   105032
 ```
 
-### 3: How many features does the file contain?
+## 3: How many features does the file contain?
 This file contains 1,208,297 features. This a large amount of features but is not unresonable for a mammalian genome annotation. 
 
 Command:
@@ -27,7 +27,7 @@ $ grep -v '^#' Rhinopithecus_bieti.ASM169854v1.115.gff3 | wc -l
  1208297
 ```
 
-### 4:How many genes are listed for this organism?
+## 4:How many genes are listed for this organism?
 There are 20,966 genes listed for this organism. 
 
 Command:
@@ -40,7 +40,7 @@ Output:
    20966
 ```
 
-### 5: Is there a feature type that you may have not heard about before? What is the feature and how is it defined? (If there is no such feature, pick a common feature.)
+## 5: Is there a feature type that you may have not heard about before? What is the feature and how is it defined? (If there is no such feature, pick a common feature.)
 When looking at all the feature types, I found that this file contained something called lnc_RNA. This feature is for long non-coding RNA, which are RNA molecultes that are above 200 nucleotides but do not code for proteins. These long non-coding RNAs play an import role in regulation of translation, metabolism and signalling. 
 
 To find these unique features, the following command was used:
@@ -71,7 +71,7 @@ Output:
   22 tRNA
 ```
 
-### 6: What are the top-ten most annotated feature types (column 3) across the genome?
+## 6: What are the top-ten most annotated feature types (column 3) across the genome?
 See table below for rank and count of the most annotated features.
 
 | Rank | Feature Type       | Count    |
@@ -105,9 +105,9 @@ Output:
 3091 lnc_RNA
 ```
 
-### 7: Having analyzed this GFF file, does it seem like a complete and well-annotated organism?
+## 7: Having analyzed this GFF file, does it seem like a complete and well-annotated organism?
 Putting all of this information together, I can say with confidence that while this genome is well-annoted it is not commplete. The large number of scaffolds (approximately 105k) indicates the genome assembly is fragmented and has yet to be fully assembled into chromosomes. In fact, results show that all of the sequencing regions are from scaffolds. However, the high gene count (approximately 21k) and detailed features like UTRs, ncRNAs, and pseudogenes indicate the annotation itself is comprehensive.
 
-### 8: Share any other insights you might note.
+## 8: Share any other insights you might note.
 
 This GFF3 file can still be highly valuable for gene expression, functional genomics, and evolutionary analysis, even though it's not based on a chromosome-level assembly. The presence of ncRNA_gene, lnc_RNA, miRNA, snoRNA, snRNA, etc., shows that non-coding RNAs are included in the annotation and there are 43,588 mRNA entries and 20,966 gene entries, meaning that most genes have multiple transcripts (which is typical). 
