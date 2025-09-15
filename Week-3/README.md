@@ -125,23 +125,3 @@ $ tabix -p gff black_rhino_genes_and_transcripts.sorted.gff.gz
 
 ## Visually verify that the first coding sequence of a gene starts with a start codon and that the last coding sequence of a gene ends with a stop codon.
 
-## Report your findings in text, and provide the code for the commands you ran in your markdown report.
-
-
-Command:
-```
-
-```
-Output:
-```
-
-```
-
-Command:
-```
-
-```
- Output:
-```
- 
-```
