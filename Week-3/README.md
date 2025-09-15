@@ -34,8 +34,9 @@ I found the best way to view the genome and annotations files is through IGV its
 
 1. Navigated to Genome > Load Genome from UCSC GenArk...
 2. Searched GCF_020826845.1 and selected it. Hit load
-3. Used default selectionions
+3. Used default selections
 
+<img width="2880" height="1800" alt="browser" src="https://github.com/user-attachments/assets/d6eed9a3-10a8-4210-bb4d-76756dbcf70e" />
 
 ## How big is the genome, and how many features of each type does the GFF file contain?
 Command:
@@ -99,8 +100,8 @@ Command:
 ```
 $ awk '$3 == "gene" || $3 == "transcript"' GCF_020826845.1_mDicBic1.mat.cur_genomic.gff > black_rhino_genes_and_transcripts.gff
 ```
-Output:
-Snipett of file
+
+Snipett of file:
 ```
 NC_080740.1     Gnomon  gene    1420918 1438648 .       + $
 NC_080740.1     Gnomon  gene    1448060 1483323 .       + $
@@ -121,7 +122,33 @@ $ bgzip black_rhino_genes_and_transcripts.sorted.gff
 $ tabix -p gff black_rhino_genes_and_transcripts.sorted.gff.gz
 ```
 
+See the new track at the bottom of the image below:
+<img width="2880" height="1800" alt="new_track" src="https://github.com/user-attachments/assets/e8577b19-06ed-4d9f-a7d6-766086d0a450" />
+
+In both the simplified track and normal track, the same region of DNA is highlighted. Howvever, the height of the bars in associated with 5' UTR, start codon, and coding vs. non-coding regions of the gene being highlighed. 
+
+Below you can see the difference in the tracks. The simplied version (below) has a continuous height while the orginal track has variations. 
+<img width="1440" height="382" alt="comparison" src="https://github.com/user-attachments/assets/78c40298-447e-403f-b891-a46aafe759b2" />
+
+One of those variation indicated coding regions. Below, the coding region is a obvious block:
+<img width="1440" height="379" alt="coding region" src="https://github.com/user-attachments/assets/ca66dc35-9473-4c4f-b38f-184f82484556" />
+
+Below this block is narrower for the 5' UTR and wider for the first exon.
+
+<img width="1440" height="900" alt="5utr_to_exon" src="https://github.com/user-attachments/assets/d6a1ddbe-260e-4228-be4b-ec1350c89ac6" />
+
 ## Zoom in to see the sequences, expand the view to show the translation table in IGV. Note how the translation table needs to be displayed in the correct orientation for it to make sense.
 
+See table below:
+<img width="1440" height="900" alt="translation_table" src="https://github.com/user-attachments/assets/ae26f563-fbb5-4d8d-b771-a3d46440fad3" />
+
 ## Visually verify that the first coding sequence of a gene starts with a start codon and that the last coding sequence of a gene ends with a stop codon.
+
+To do this visualization, I used CDK14. CDK14 is a well-conserved kinase important for cell cycle regulation, making it a reliable reference for genomic analysis. Its stable gene structure helps ensure accurate annotation of coding regions and this makes CDK14 ideal for checking gene annotation and translation in genome browsers.
+
+I was able to identify the start and stop codons in both cases. See below:
+<img width="1440" height="431" alt="start" src="https://github.com/user-attachments/assets/e7d46505-53f9-41ae-9748-33bad68483a1" />
+
+<img width="1440" height="900" alt="stop" src="https://github.com/user-attachments/assets/803131da-23f6-415a-968b-a6ac2be924fc" />
+
 
