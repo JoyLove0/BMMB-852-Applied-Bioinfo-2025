@@ -1,4 +1,4 @@
-# Assigment 2
+# Assigment 2: Demonstrate data analysis at UNIX command line
 
 ## 1: Tell us a bit about the organism.
 The organism analyzed was Rhinopithecus bieti, also known as the black-and-white snub-nosed monkey. It is an endangered primate that primarly lives in high-altitude forests of China's and Tibet. As the name suggests, it is characterized by its snub nose with concave nostril. (I thought its nose was silly and that was why I chose it! :))
