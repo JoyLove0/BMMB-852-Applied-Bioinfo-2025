@@ -5,4 +5,4 @@ This course designed for students with biology backgrounds, focusing on the comp
 
 Each week there will be directory created for relevant homework assignments, notes, images, etc. 
 
-![500455166_18503626693016991_3972486111867552796_n](https://github.com/user-attachments/assets/353359e5-b89c-43c8-b211-af184418ff65)
+<img src="https://github.com/user-attachments/assets/353359e5-b89c-43c8-b211-af184418ff65" width="8000">
