@@ -6,6 +6,7 @@ The organism analyzed was Rhinopithecus bieti, also known as the black-and-white
 Command:
 ```
 $ curl -O ftp://ftp.ensembl.org/pub/current_gff3/rhinopithecus_bieti/Rhinopithecus_bieti.ASM169854v1.115.gff3.gz
+$ gunzip Rhinopithecus_bieti.ASM169854v1.115.gff3.gz
 ```
 Output:
 ```
