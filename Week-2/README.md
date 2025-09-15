@@ -5,8 +5,8 @@ The organism analyzed was Rhinopithecus bieti, also known as the black-and-white
 
 Command:
 ```
-$ curl -O ftp://ftp.ensembl.org/pub/current_gff3/rhinopithecus_bieti/Rhinopithecus_bieti.ASM169854v1.115.gff3.gz
-$ gunzip Rhinopithecus_bieti.ASM169854v1.115.gff3.gz
+curl -O ftp://ftp.ensembl.org/pub/current_gff3/rhinopithecus_bieti/Rhinopithecus_bieti.ASM169854v1.115.gff3.gz
+gunzip Rhinopithecus_bieti.ASM169854v1.115.gff3.gz
 ```
 Output:
 ```
@@ -20,7 +20,7 @@ This will be discussed in more detait but the assemble for this organism is not 
 
 Command:
 ```
-$ grep -v '^#' Rhinopithecus_bieti.ASM169854v1.115.gff3 | cut -f1 | sort | uniq | wc -l
+grep -v '^#' Rhinopithecus_bieti.ASM169854v1.115.gff3 | cut -f1 | sort | uniq | wc -l
 ```
 Output:
 ```
@@ -32,7 +32,7 @@ This file contains 1,208,297 features. This a large amount of features but is no
 
 Command:
 ```
-$ grep -v '^#' Rhinopithecus_bieti.ASM169854v1.115.gff3 | wc -l
+grep -v '^#' Rhinopithecus_bieti.ASM169854v1.115.gff3 | wc -l
 ```
  Output:
 ```
@@ -44,7 +44,7 @@ There are 20,966 genes listed for this organism.
 
 Command:
 ```
-$ grep -v '^#' Rhinopithecus_bieti.ASM169854v1.115.gff3 | awk '$3 == "gene"' | wc -l
+grep -v '^#' Rhinopithecus_bieti.ASM169854v1.115.gff3 | awk '$3 == "gene"' | wc -l
 
 ```
 Output:
@@ -101,7 +101,7 @@ See table below for rank and count of the most annotated features.
 
 Command: 
 ```
-$ grep -v '^#' Rhinopithecus_bieti.ASM169854v1.115.gff3 | cut -f3 | sort | uniq -c | sort -nr | head -10
+grep -v '^#' Rhinopithecus_bieti.ASM169854v1.115.gff3 | cut -f3 | sort | uniq -c | sort -nr | head -10
 ```
 Output:
 ```
