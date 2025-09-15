@@ -1,4 +1,4 @@
-# Assigment 3
+# Assigment 3: Visualizing genomic data
 
 For this assignment, the NCBI's reference genomes for the Black Rhino (Diceros bicornis) was used. The link to this can be found at: [Black Rhino Genome](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_020826845.1/). This information can also be found [here](https://hgdownload.soe.ucsc.edu/hubs/mammals/index.html). Once at that sight navigate to the same refernce genome: GCF_020826845.1_mDicBic1.mat.cur (number 89). I am noting this because this information is more accessible in IGV. 
 
