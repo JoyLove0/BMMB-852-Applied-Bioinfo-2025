@@ -3,6 +3,17 @@
 ## 1: Tell us a bit about the organism.
 The organism analyzed was Rhinopithecus bieti, also known as the black-and-white snub-nosed monkey. It is an endangered primate that primarly lives in high-altitude forests of China's and Tibet. As the name suggests, it is characterized by its snub nose with concave nostril. (I thought its nose was silly and that was why I chose it! :))
 
+Command:
+```
+$ curl -O ftp://ftp.ensembl.org/pub/current_gff3/rhinopithecus_bieti/Rhinopithecus_bieti.ASM169854v1.115.gff3.gz
+```
+Output:
+```
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:--  0     0    0     0    0     0      0      0 --:--:-- --:--:--  2 15.0M    2  451k    0     0   247k      0  0:01:02  0:00:01 13 15.0M   13 2053k    0     0   723k      0  0:00:21  0:00:02 28 15.0M   28 4345k    0     0  1125k      0  0:00:13  0:00:03 37 15.0M   37 5792k    0     0  1205k      0  0:00:12  0:00:04 46 15.0M   46 7190k    0     0  1225k      0  0:00:12  0:00:05 56 15.0M   56 8604k    0     0  1264k      0  0:00:12  0:00:06 67 15.0M   67 10.1M    0     0  1333k      0  0:00:11  0:00:07 79 15.0M   79 11.9M    0     0  1383k      0  0:00:11  0:00:08 87 15.0M   87 13.1M    0     0  1368k      0  0:00:11  0:00:09 98 15.0M   98 14.8M    0     0  1403k      0  0:00:10  0:00:10100 15.0M  100 15.0M    0     0  1400k      0  0:00:10  0:00:10 --:--:-- 1623k
+```
+
 ## 2: How many sequence regions (chromosomes) does the file contain? Does that match with the expectation for this organism?
 This will be discussed in more detait but the assemble for this organism is not complete and therefore is primary composed of contigs and scaffolds. There are 105,032 sequence reqions, but previous studied suggest that the black-and-white snub-nosed monkey has 44 chromosomes. 
 
