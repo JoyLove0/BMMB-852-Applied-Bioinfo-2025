@@ -22,10 +22,7 @@ srr_accession_number="SRR3194431"           # SRR ID
 wd="reads"                             # Output folder for reads
 
 ### ================ DEPENDENCIES (Run once) ================= ###
-# micromamba activate bioinfo
-
-### Dependencies (do this once)
-# micromamba activate bioinfo
+#conda activate bioinfo
 
 ###################################### NO EDIT BEYOND THIS LINE ################################
 ### Last Weeks Code:  Download genome (FASTA + annotation)
