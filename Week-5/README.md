@@ -137,7 +137,7 @@ Approx 65% complete for SRR3194431_1.fastq
 Analysis complete for SRR3194431_1.fastq
 ```
 - Evaluate the FASTQC report and summarize your findings.
-<img width="1440" height="900" alt="Screenshot 2025-09-28 at 10 43 28 PM" src="https://github.com/user-attachments/assets/41d1c567-a16c-4b10-9af9-fcd1f77ad9ca" />
+<img width="551" height="324" alt="Screenshot 2025-09-28 at 10 46 00 PM" src="https://github.com/user-attachments/assets/a5d35326-ec04-4a2b-a280-88460d941cfe" />
 
 <img width="1440" height="900" alt="Screenshot 2025-09-28 at 10 43 28 PM" src="https://github.com/user-attachments/assets/cdef2faf-f1b8-4ba4-b996-cb90fa51516e" />
 
