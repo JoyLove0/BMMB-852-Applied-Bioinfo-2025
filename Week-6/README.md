@@ -178,6 +178,7 @@ N      : 0
 ```
 
 - What was the expected average coverage?
+
 For the ~1500 reads I used orginally, I should have got 10X coverage. When using all reads (10,794 bp), I should have got 464,041X coverage.
 
 How 464,041X:
