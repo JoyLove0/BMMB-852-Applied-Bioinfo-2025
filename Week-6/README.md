@@ -139,9 +139,7 @@ The next section will emphasize these suspicions.
 ## Generate alignment statistics for the BAM file.
 - What percentage of reads aligned to the genome?
 
-0% of the reads aligned to the reference genone, even after downloading the entire SRR file. 
-
-¯\_(ツ)_/¯
+0% of the reads aligned to the reference genone, even after downloading the entire SRR file.  ¯\_(ツ)_/¯     
 
 Code:
 ```
