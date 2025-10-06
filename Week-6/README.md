@@ -186,9 +186,8 @@ How 464,041X:
 coverage = total bases/ genome size = 5,008,831,278/ 10,794 = 464,041.
 
 - What is the observed average coverage?
-0X
 
-｡°(°¯᷄◠¯᷅°)°｡
+0X  ｡°(°¯᷄◠¯᷅°)°｡
 
 - How much does the coverage vary across the genome? (Provide a visual estimate.)
 
@@ -196,7 +195,7 @@ The coverage is practically non-existant expect for at a one point at the end an
 
 <img width="1429" height="147" alt="Screenshot 2025-10-06 at 12 11 43 AM" src="https://github.com/user-attachments/assets/83b3fe3c-91dc-4b64-b19f-9ea0298f6666" />
 
-
+---
 In conclusion:
 ![aZrXrgQ_700bwp](https://github.com/user-attachments/assets/d8b1eaa6-db09-4a75-b0a9-b6c5ea2d2c86)
 
