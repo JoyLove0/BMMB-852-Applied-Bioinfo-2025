@@ -126,19 +126,6 @@ SRA_ACC = SRR9945583
 ```
 To process another sample, update SRA_ACC and re-run the relevant targets.
 
-### File Structure After Running
-.
-├── Makefile
-├── refs/
-│   └── zika_paper_genome.fa
-├── reads/
-│   └── SRR9945583_1.fastq
-└── bam/
-    ├── SRR9945583.sam
-    ├── SRR9945583.bam
-    └── SRR9945583.bam.bai
-
-
 ## Visualize the resulting BAM files for both simulated reads and reads downloaded from SRA.
 My SRA file aligned to nothing at first (see below). 
 <img width="1440" height="900" alt="Screenshot 2025-10-05 at 11 17 43 PM" src="https://github.com/user-attachments/assets/38d5e4c7-ba5a-40d5-99ba-610209eecf4d" />
