@@ -52,10 +52,6 @@ clean:
 
 This project automates a basic bioinformatics workflow using a **Makefile**. It downloads the Zika virus genome and sequencing reads, indexes the genome, and aligns the reads to produce a sorted and indexed BAM file.
 
----
-
-### 📋 Workflow Overview
-
 The pipeline includes the following steps:
 
 1. **Obtain the reference genome** (Zika virus)
@@ -64,8 +60,6 @@ The pipeline includes the following steps:
 4. **Align reads** to the genome, sort, and index the output BAM
 
 Each of these steps is defined as a separate **Makefile target**, allowing you to run them individually or all at once.
-
----
 
 | **Target** | **Description**                                          |
 | ---------- | -------------------------------------------------------- |
@@ -117,7 +111,7 @@ Input: Genome, reads
 Output: bam/SRR9945583.bam and bam/SRR9945583.bam.bai
 Note: make align depends on make index and make reads.
 
-Extra: Clean Up Generated Files
+Extra: Clean Up 
 ``` make clean ```
 Deletes all generated directories and files:
 - refs/
