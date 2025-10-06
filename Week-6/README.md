@@ -167,7 +167,7 @@ Output:
 0 + 0 with mate mapped to a different chr (mapQ>=5)```
 ```
 Also, when I copied the details from the covergae track on IGV, I got nosense:
-
+```
 NC_012532.1:10,717
 <hr>Total count: 157
 A      : 0
@@ -175,6 +175,7 @@ C      : 157  (100%,     157+,   0- )
 G      : 0
 T      : 0
 N      : 0
+```
 
 - What was the expected average coverage?
 For the ~1500 reads I used orginally, I should have got 10X coverage. When using all reads (10,794 bp), I should have got 464,041X coverage.
