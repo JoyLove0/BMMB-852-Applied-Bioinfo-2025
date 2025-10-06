@@ -127,7 +127,8 @@ SRA_ACC = SRR9945583
 To process another sample, update SRA_ACC and re-run the relevant targets.
 
 ## Visualize the resulting BAM files for both simulated reads and reads downloaded from SRA.
-My SRA file aligned to nothing at first (see below). 
+My SRR file aligned to nothing at first (see below). 
+
 <img width="1440" height="900" alt="Screenshot 2025-10-05 at 11 17 43 PM" src="https://github.com/user-attachments/assets/38d5e4c7-ba5a-40d5-99ba-610209eecf4d" />
 
 So, I had to download the whole SRA file to see if I got any hits. I did! But the hit are very suspicious. Note that the IGV idenifies paired read but this is single read data. Also, see the unusually high covergae on the right end.
