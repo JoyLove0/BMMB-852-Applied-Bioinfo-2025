@@ -164,7 +164,7 @@ Output:
 0 + 0 singletons (N/A : N/A)
 0 + 0 with mate mapped to a different chr
 0 + 0 with mate mapped to a different chr (mapQ>=5)```
-
+```
 Also, when I copied the details from the covergae track on IGV, I got nosense:
 
 NC_012532.1:10,717
