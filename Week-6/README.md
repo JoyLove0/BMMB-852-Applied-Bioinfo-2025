@@ -55,6 +55,7 @@ It will:
 make genome
  ```
 Source: NCBI Genome via datasets CLI
+
 Output: refs/zika_paper_genome.fa
 
 2. Downloads sequencing reads from the SRA.
@@ -62,7 +63,9 @@ Output: refs/zika_paper_genome.fa
 make reads 
 ```
 Accession: SRR9945583
+
 Output: reads/SRR9945583_1.fastq
+
 Only single-end reads are used in this example.
 
 3. Indexes the reference genome using BWA.
@@ -70,7 +73,9 @@ Only single-end reads are used in this example.
 make index
 ```
 Input: refs/zika_paper_genome.fa
+
 Output: BWA index files (.bwt, .pac, etc.)
+
 Note: make index depends on make genome.
 
 5. Aligns reads to the genome, sorts the result, and creates an indexed BAM.
@@ -78,7 +83,9 @@ Note: make index depends on make genome.
 make align
 ```
 Input: Genome, reads
+
 Output: bam/SRR9945583.bam and bam/SRR9945583.bam.bai
+
 Note: make align depends on make index and make reads.
 
 Extra: Clean Up 
