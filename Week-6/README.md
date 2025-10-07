@@ -55,6 +55,7 @@ It will:
 make genome
  ```
 Source: NCBI Genome via datasets CLI
+
 Output: refs/zika_paper_genome.fa
 
 ### 2. Downloads sequencing reads from the SRA.
@@ -82,7 +83,9 @@ Note: make index depends on make genome.
 make align
 ```
 Input: Genome, reads
+
 Output: bam/SRR9945583.bam and bam/SRR9945583.bam.bai
+
 Note: make align depends on make index and make reads.
 
 ### Extra: Clean Up 
