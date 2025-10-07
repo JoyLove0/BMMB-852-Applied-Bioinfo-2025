@@ -50,31 +50,41 @@ It will:
 - Align reads and produce sorted + indexed BAM
 
 ### Step-by-Step Usage
-1. ``` make genomen ```
-Downloads and extracts the Zika virus genome.
+1. Downloads and extracts the Zika virus genome.
+```
+make genome
+ ```
 Source: NCBI Genome via datasets CLI
 Output: refs/zika_paper_genome.fa
 
-2.``` make reads ```
-Downloads sequencing reads from the SRA.
+2. Downloads sequencing reads from the SRA.
+``` 
+make reads 
+```
 Accession: SRR9945583
 Output: reads/SRR9945583_1.fastq
 Only single-end reads are used in this example.
 
-3. ```make index```
-Indexes the reference genome using BWA.
+3. Indexes the reference genome using BWA.
+```
+make index
+```
 Input: refs/zika_paper_genome.fa
 Output: BWA index files (.bwt, .pac, etc.)
 Note: make index depends on make genome.
 
-4. ```make align```
-Aligns reads to the genome, sorts the result, and creates an indexed BAM.
+5. Aligns reads to the genome, sorts the result, and creates an indexed BAM.
+```
+make align
+```
 Input: Genome, reads
 Output: bam/SRR9945583.bam and bam/SRR9945583.bam.bai
 Note: make align depends on make index and make reads.
 
 Extra: Clean Up 
-``` make clean ```
+``` 
+make clean
+```
 Deletes all generated directories and files:
 - refs/
 - reads/
@@ -86,7 +96,7 @@ You can change the genome or read accession numbers by editing the top of the Ma
 GENOME_ACC = GCF_000882815.3
 SRA_ACC = SRR9945583
 ```
-To process another sample, update SRA_ACC and re-run the relevant targets.
+To process another sample, update SRA_ACC and/or GENOME_ACC and re-run the relevant targets.
 
 ## Visualize the resulting BAM files for both simulated reads and reads downloaded from SRA.
 My SRR file aligned to nothing at first (see below). 
