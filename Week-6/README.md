@@ -62,7 +62,9 @@ Output: refs/zika_paper_genome.fa
 make reads 
 ```
 Accession: SRR9945583
+
 Output: reads/SRR9945583_1.fastq
+
 Only single-end reads are used in this example.
 
 ### 3. Indexes the reference genome using BWA.
@@ -70,7 +72,9 @@ Only single-end reads are used in this example.
 make index
 ```
 Input: refs/zika_paper_genome.fa
+
 Output: BWA index files (.bwt, .pac, etc.)
+
 Note: make index depends on make genome.
 
 ### 5. Aligns reads to the genome, sorts the result, and creates an indexed BAM.
