@@ -50,7 +50,7 @@ It will:
 - Align reads and produce sorted + indexed BAM
 
 ### Step-by-Step Usage
-1. Downloads and extracts the Zika virus genome.
+### 1. Downloads and extracts the Zika virus genome.
 ```
 make genome
  ```
@@ -58,7 +58,7 @@ Source: NCBI Genome via datasets CLI
 
 Output: refs/zika_paper_genome.fa
 
-2. Downloads sequencing reads from the SRA.
+### 2. Downloads sequencing reads from the SRA.
 ``` 
 make reads 
 ```
@@ -68,7 +68,7 @@ Output: reads/SRR9945583_1.fastq
 
 Only single-end reads are used in this example.
 
-3. Indexes the reference genome using BWA.
+### 3. Indexes the reference genome using BWA.
 ```
 make index
 ```
@@ -78,7 +78,7 @@ Output: BWA index files (.bwt, .pac, etc.)
 
 Note: make index depends on make genome.
 
-5. Aligns reads to the genome, sorts the result, and creates an indexed BAM.
+### 5. Aligns reads to the genome, sorts the result, and creates an indexed BAM.
 ```
 make align
 ```
@@ -88,7 +88,7 @@ Output: bam/SRR9945583.bam and bam/SRR9945583.bam.bai
 
 Note: make align depends on make index and make reads.
 
-Extra: Clean Up 
+### Extra: Clean Up 
 ``` 
 make clean
 ```
