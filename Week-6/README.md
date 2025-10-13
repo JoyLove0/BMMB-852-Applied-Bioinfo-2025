@@ -78,7 +78,7 @@ Output: BWA index files (.bwt, .pac, etc.)
 
 Note: make index depends on make genome.
 
-### 5. Aligns reads to the genome, sorts the result, and creates an indexed BAM.
+### 4. Aligns reads to the genome, sorts the result, and creates an indexed BAM.
 ```
 make align
 ```
