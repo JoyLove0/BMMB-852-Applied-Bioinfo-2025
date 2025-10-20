@@ -42,7 +42,7 @@ make align SRR_ACC=SRR1972739 REF=ref/zika_paper_genome.fa
 
 ### 5. wiggle: Coverts the BAM file into a BigWig file
 ```
-make wiggle make SRR_ACC=SRR1972739 GENOME_FA=ref/zika_paper_genome.fa
+make wiggle SRR_ACC=SRR1972739 REF=ref/zika_paper_genome.fa
 ```
 
 ### Extra: Clean Up 
