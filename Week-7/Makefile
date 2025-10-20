@@ -41,18 +41,19 @@ index:
 # Step 4: Align and generate sorted, indexed BAM file
 align:
 	mkdir -p bam
-	bwa mem $(REF) $(R1) > $(SAM)
-	samtools sort $(SAM) > $(BAM)
-	samtools index $(BAM)
-	echo "# Reads $(SRA_ACC) aligned to genome $(GENOME_ACC). The resulting sorted and indexed file is $(BAM)"
+	bwa mem $(REF) reads/$(SRA_ACC)_1.fastq > bam/$(SRA_ACC).sam
+	samtools sort bam/$(SRA_ACC).sam > bam/$(SRA_ACC).bam
+	samtools index bam/$(SRA_ACC).bam
+	samtools flagstat bam/$(SRA_ACC).bam > bam/$(SRA_ACC)_alignment_report.txt
+	echo "# Reads $(SRA_ACC) aligned to genome $(GENOME_ACC). The resulting sorted and indexed file is bam/$(SRA_ACC).bam"
 
 # Step 5: Coverts the BAM file into a BigWig file
 wiggle:
 	samtools faidx ${REF}
-	LC_ALL=C; bedtools genomecov -ibam  ${BAM} -split -bg | \
-		sort -k1,1 -k2,2n > ${BG}
-	bedGraphToBigWig ${BG} ${REF}.fai ${BW}
-	echo "# The BAM file ${BAM} was converted to a BigWig file ${BW}"
+	LC_ALL=C; bedtools genomecov -ibam  bam/$(SRA_ACC).bam -split -bg | \
+		sort -k1,1 -k2,2n > bam/$(SRA_ACC).bedgraph
+	bedGraphToBigWig bam/$(SRA_ACC).bedgraph ${REF} bam/$(SRA_ACC).bw
+	echo "# The BAM file bam/$(SRA_ACC).bam was converted to a BigWig file bam/$(SRA_ACC).bw"
 
 clean:
 	rm -r refs reads bam
