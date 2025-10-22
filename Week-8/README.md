@@ -12,7 +12,7 @@ As a reminder, my paper is titled: "Zika Virus Targets Human Cortical Neural Pre
 ## 2. Create a design.csv file that connects the SRR numbers to the sample names.
 Usually to do this, I would do as follows:
 ```
-bio search PRJNA31329 -H --csv > design.csv
+bio search PRJNA313294 -H --csv > design.csv
 ```
 
 However, I got this error:
