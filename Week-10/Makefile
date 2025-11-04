@@ -1,4 +1,3 @@
-
 ### Makefile for my workflow: analyzing Zika Virus data
 # The result should consist of:
 # - A genome named in a user-friendly name
@@ -6,6 +5,7 @@
 # - FASTQC reports for each read
 # - Alignments and coverage files in BAM and BW formats.
 # - A statistics alignment report for BAM file
+# - A VCF file with variants called from the BAM file
 
 ### ------------------------ House Keeping ----------------------------
 # Set the shell the commands run in.
@@ -30,6 +30,11 @@ R1 ?= reads/$(SRA_ACC)_1.fastq
 R2 ?= reads/$(SRA_ACC)_2.fastq
 SAM ?= bam/$(SRA_ACC).sam
 BAM ?= bam/$(SRA_ACC).bam
+VCF ?= vcf/variants.vcf.gz
+GFF ?= refs/ncbi_dataset/data/$(GENOME_ACC)/zika_paper_genome.gff3
+F1 ?= -d 100 --annotate 'INFO/AD,FORMAT/DP,FORMAT/AD,FORMAT/ADF,FORMAT/ADR,FORMAT/SP' # Flags for the mpileup command
+F2 ?= --ploidy 2 --annotate 'FORMAT/GQ' # Flags for the call command
+IGV_PORT ?= 60151 # IGV network interface port (default: 60151)
 
 ### -------------------- Actual Workflow ----------------------------
 # Default target
@@ -109,6 +114,49 @@ wiggle:
 		sort -k1,1 -k2,2n > bam/$(SRA_ACC).bedgraph
 	bedGraphToBigWig bam/$(SRA_ACC).bedgraph ${REF} bam/$(SRA_ACC).bw
 	echo "# The BAM file bam/$(SRA_ACC).bam was converted to a BigWig file bam/$(SRA_ACC).bw"
+
+# ------------------------------------------------------------
+# Step 6: Variant calling + automated visualization for one sample
+# Usage: make variants SRR_ACC=SRR1972739 REF=ref/zika_paper_genome.fa  F1='-d 100 --annotate ...' F2='--ploidy 2 --annotate ...' IGV_PORT=60151
+# ------------------------------------------------------------
+variants_sample:
+	mkdir -p vcf
+	echo "# Calling variants for sample $(SRA_ACC)..."
+	bcftools mpileup ${F1} -O u -f ${REF} bam/$(SRA_ACC).bam | \
+		bcftools call ${F2} -m -v -O z -o vcf/$(SRA_ACC).vcf.gz
+	bcftools index vcf/$(SRA_ACC).vcf.gz
+	echo "# VCF file created and indexed: vcf/$(SRA_ACC).vcf.gz"
+	echo ""
+	echo "# Visualization via IGV network interface (port $(IGV_PORT))"
+	echo "# Make sure IGV is running with port $(IGV_PORT) enabled."
+	echo "new" | nc localhost $(IGV_PORT) || true
+	echo "genome $(REF)" | nc localhost $(IGV_PORT) || true
+	echo "load $(GFF)" | nc localhost $(IGV_PORT) || true
+	echo "load bam/$(SRA_ACC).bam" | nc localhost $(IGV_PORT) || true
+	echo "load vcf/$(SRA_ACC).vcf.gz" | nc localhost $(IGV_PORT) || true
+	echo "# IGV session loaded for sample $(SRA_ACC)."
+
+# ------------------------------------------------------------
+# Step 7: Multisample VCF creation + automated visualization
+# Usage: make variants_multi IGV_PORT=60151 VCF_LIST='vcf/SRR1.vcf.gz vcf/SRR2.vcf.gz'
+# ------------------------------------------------------------
+variants_multi:
+	mkdir -p vcf
+	echo "# Merging VCF files into a multisample VCF..."
+	bcftools merge -Oz -o vcf/multisample.vcf.gz $(VCF_LIST)
+	bcftools index vcf/multisample.vcf.gz
+	echo "# Multisample VCF created: vcf/multisample.vcf.gz"
+	echo ""
+	echo "# Visualization via IGV network interface (port $(IGV_PORT))"
+	echo "# Make sure IGV is running with port $(IGV_PORT) enabled."
+	echo "new" | nc localhost $(IGV_PORT) || true
+	echo "genome $(REF)" | nc localhost $(IGV_PORT) || true
+	echo "load $(GFF)" | nc localhost $(IGV_PORT) || true
+	for BAM in bam/*.bam; do \
+		echo "load $$BAM" | nc localhost $(IGV_PORT) || true; \
+	done
+	echo "load vcf/multisample.vcf.gz" | nc localhost $(IGV_PORT) || true
+	echo "# ✅ IGV session loaded with multisample data."
 
 # ------------------------------------------------------------
 # optional clean up command
