@@ -1,12 +1,12 @@
 # Week 11: Establish the effects of variants  
---
+------------------------------------------------------------------------------------------------------------------
 ### Goals:
 - Generate a VCF file.
 - Evaluate the effects of at least three variants in your VCF file.
 - You may use visual inspection via IGV, or you may use a software tool like snpEff, VEP, or any other alternative.
 - Try to find variants with different types of effects.
 - Summarize the process you followed and the results you obtained.
---
+------------------------------------------------------------------------------------------------------------------
 
 ## Generate a VCF file
 I used my Makefile to generate VCF files. To do this, I do the following:
