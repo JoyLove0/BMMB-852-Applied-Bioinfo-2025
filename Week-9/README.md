@@ -119,6 +119,7 @@ Input:
 - Genome accession (GCF_000882815.3 for example)
 - SRA accession (SRR1972739 for example)
 - Reference genome: refs/zika_paper_genome.fa
+  
 Output:
 - fastqc report
 - Sorted BAM: bam/SRR1972739.bam for example
