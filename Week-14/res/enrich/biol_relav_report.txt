@@ -1,0 +1,18 @@
+GO:0030198,extracellular matrix organization
+GO:0007160,cell-matrix adhesion
+GO:0001952,regulation of cell-matrix adhesion
+GO:0001568,blood vessel development
+GO:0048514,blood vessel morphogenesis
+GO:0031012,extracellular matrix
+GO:0062023,collagen-containing extracellular matrix
+GO:0005201,extracellular matrix structural constituent
+GO:0050840,extracellular matrix binding
+HPA:0300000,Lung
+HPA:0301361,Lung; alveolar cells type I[≥Low]
+HPA:0300201,Lung; endothelial cells[≥Low]
+HPA:0301371,Lung; alveolar cells type II[≥Low]
+HPA:0301362,Lung; alveolar cells type I[≥Medium]
+KEGG:05222,Small cell lung cancer
+KEGG:05223,Non-small cell lung cancer
+REAC:R-HSA-1474244,Extracellular matrix organization
+WP:WP4658,Small cell lung cancer
