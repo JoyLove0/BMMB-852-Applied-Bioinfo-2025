@@ -67,6 +67,11 @@ make index align
 ```
 
 # Visualizing the alignments with IgV
+Bigwig files of all samples:
+<img width="1424" height="427" alt="Screenshot 2025-12-11 at 12 55 18 AM" src="https://github.com/user-attachments/assets/ed5bd954-7c84-407f-aae3-796b07babd5b" />
+
+Just HBR_1 and zoomed in:
+<img width="1440" height="597" alt="Screenshot 2025-12-11 at 12 57 52 AM" src="https://github.com/user-attachments/assets/86a0f4fc-26a7-445e-8a3a-a078dafc3565" />
 
 
 # Create the counts
@@ -142,4 +147,8 @@ Several genes show consistent expression within each condition, indicating good 
 Many genes have very low or zero counts across all samples (e.g., ENSG00000274280, ENSG00000273044), indicating little to no expression in either condition; these would typically be filtered out before differential expression analysis. Overall, the table shows a mixture of stably expressed genes, condition-dependent genes, and unexpressed genes, which is expected in an RNA-seq experiment.
 
 I used ENSG00000221963 to vizualize the different expression in IgV. See below:
+
+<img width="1435" height="689" alt="Screenshot 2025-12-16 at 8 22 44 PM" src="https://github.com/user-attachments/assets/9647bf5d-0085-4b23-b7c0-cdc64c58fb87" />
+
+
 
